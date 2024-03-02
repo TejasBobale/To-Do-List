@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+let itemArray = ["SUP-501", "SUP-502", "SUP-503", "SUP-504", "SUP-505"]
+
+class Item{
+    var title: String = ""
+    var done: Bool = false
+}
