@@ -14,7 +14,7 @@ class TodoListViewController: UITableViewController {
     var itemArray = [Item]()
     var selectedCategory: Category?{
         didSet{
-            loadItems()
+//            loadItems()
         }
     }
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -48,7 +48,7 @@ class TodoListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        context.delete(itemArray[indexPath.row])
+//        context.delete(itemArray[indexPath.row])
         itemArray.remove(at: indexPath.row)
         
         //itemArray[indexPath.row].done = !itemArray[indexPath.row].done
@@ -66,13 +66,13 @@ class TodoListViewController: UITableViewController {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add New Task", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add Task", style: .default){(action) in
-            let newTask = Item(context: self.context)
+//            let newTask = Item(context: self.context)
             
-            newTask.title = textField.text!
-            newTask.done = false
-            newTask.parentCategory = self.selectedCategory
-            self.itemArray.append(newTask)
-            self.saveItems()
+//            newTask.title = textField.text!
+//            newTask.done = false
+//            newTask.parentCategory = self.selectedCategory
+//            self.itemArray.append(newTask)
+//            self.saveItems()
         }
         
         alert.addTextField{ (alertTextField) in
@@ -96,39 +96,39 @@ class TodoListViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    func loadItems(with request: NSFetchRequest<Item> = Item.fetchRequest(), predicate: NSPredicate? = nil){
-        let categoryPredicate = NSPredicate(format: "parentCategory.name MATCHES %@", selectedCategory!.name!)
-        if let additionalPredicate = predicate{
-            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [categoryPredicate, additionalPredicate])
-        }else{
-            request.predicate = categoryPredicate
-        }
-        do {
-            itemArray = try context.fetch(request)
-        } catch {
-            print("ERROR FETCHING DATA FROM CONTEXT -> \(error)")
-        }
-        tableView.reloadData()
-    }
+//    func loadItems(with request: NSFetchRequest<Item> = Item.fetchRequest(), predicate: NSPredicate? = nil){
+//        let categoryPredicate = NSPredicate(format: "parentCategory.name MATCHES %@", selectedCategory!.name!)
+//        if let additionalPredicate = predicate{
+//            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [categoryPredicate, additionalPredicate])
+//        }else{
+//            request.predicate = categoryPredicate
+//        }
+//        do {
+//            itemArray = try context.fetch(request)
+//        } catch {
+//            print("ERROR FETCHING DATA FROM CONTEXT -> \(error)")
+//        }
+//        tableView.reloadData()
+//    }
 }
 
 extension TodoListViewController: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let request: NSFetchRequest<Item> = Item.fetchRequest()
-        let predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
-        
-        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
-
-        loadItems(with: request, predicate: predicate)
+//        let request: NSFetchRequest<Item> = Item.fetchRequest()
+//        let predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
+//        
+//        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+//
+//        loadItems(with: request, predicate: predicate)
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchBar.text?.count == 0{
-            loadItems()
-            
-            DispatchQueue.main.async {
-                searchBar.resignFirstResponder()
-            }
-            
-        }
+//        if searchBar.text?.count == 0{
+//            loadItems()
+//            
+//            DispatchQueue.main.async {
+//                searchBar.resignFirstResponder()
+//            }
+//            
+//        }
     }
 }
