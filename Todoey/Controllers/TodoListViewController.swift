@@ -52,21 +52,14 @@ class TodoListViewController: UITableViewController {
             do {
                 try realm.write{
                     item.done = !item.done
+                    //realm.delete(item)
                 }
             } catch {
                 print("ERROR \(error)")
             }
         }
         tableView.reloadData()
-        
-//        context.delete(itemArray[indexPath.row])
-//        todoItems.remove(at: indexPath.row)
-        
-        //todoItems[indexPath.row].done = !itemArray[indexPath.row].done
-        
-//        saveItems()
-        
-        tableView.deselectRow(at: indexPath, animated: true)
+//        tableView.deselectRow(at: indexPath, animated: true)
         
     }
     
