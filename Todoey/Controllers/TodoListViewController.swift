@@ -48,6 +48,16 @@ class TodoListViewController: UITableViewController {
     // MARK: - TableView Delegate Methods
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let item = todoItems?[indexPath.row]{
+            do {
+                try realm.write{
+                    item.done = !item.done
+                }
+            } catch {
+                print("ERROR \(error)")
+            }
+        }
+        tableView.reloadData()
         
 //        context.delete(itemArray[indexPath.row])
 //        todoItems.remove(at: indexPath.row)
@@ -63,7 +73,6 @@ class TodoListViewController: UITableViewController {
     // MARK: - Add New Item
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        
         var textField = UITextField()
         let alert = UIAlertController(title: "Add New Task", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add Task", style: .default){(action) in
