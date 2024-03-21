@@ -96,15 +96,6 @@ class TodoListViewController: UITableViewController {
     
     // MARK: - Model Manipulation Method
     
-    func saveItems(){
-//        do {
-//            try context.save()
-//        } catch  {
-//            print("ERROR SAVING CONTEXT -> \(error)")
-//        }
-//
-    }
-    
     func loadItems(){
         todoItems = selectedCategory?.items.sorted(byKeyPath: "dateCreated", ascending: true)
         tableView.reloadData()
