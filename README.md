@@ -1,9 +1,9 @@
 To-Do-List
 
-![Simulator Screenshot - iPhone 15 Pro - 2024-03-22 at 13 21 36](https://github.com/Tron8268/To-Do-List/assets/82048036/d1d6f40f-3d07-4a20-bbd6-f0dfa95d2977)
+![Screenshot 2024-03-22 at 2 23 58 PM](https://github.com/Tron8268/To-Do-List/assets/82048036/5d0f8d5b-8387-4f76-9a31-3e092c2e2a88)
 
-![simulator_screenshot_3D37BC79-E25B-4BCF-A940-4A78A9FFC053](https://github.com/Tron8268/To-Do-List/assets/82048036/baa04091-f219-45dd-b8d8-d9c2c173fc45)
+![Screenshot 2024-03-22 at 2 24 24 PM](https://github.com/Tron8268/To-Do-List/assets/82048036/9cbedf0f-1f40-410d-831a-f67aa9df6708)
 
-![Simulator Screenshot - iPhone 15 Pro - 2024-03-22 at 13 21 42](https://github.com/Tron8268/To-Do-List/assets/82048036/a38af973-db3e-4bae-babd-421d4765e76b)
+![Screenshot 2024-03-22 at 2 24 51 PM](https://github.com/Tron8268/To-Do-List/assets/82048036/7a7fbd81-d2c7-4737-a1a6-46f74a361bf5)
 
-![simulator_screenshot_709EE6F7-887F-4A57-A45E-3DCC0E7CF9EF](https://github.com/Tron8268/To-Do-List/assets/82048036/03d17aea-0d5b-4ce3-8450-aea5be70d867)
+![Screenshot 2024-03-22 at 2 23 17 PM](https://github.com/Tron8268/To-Do-List/assets/82048036/99e64020-bd84-4803-83df-81ecb3008f96)
