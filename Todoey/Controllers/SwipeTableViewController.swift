@@ -31,7 +31,6 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
             // handle action by updating model with deletion
             print("Item Deleted")
             self.updateModel(at: indexPath)
-            
         }
 
         // customize the action appearance
