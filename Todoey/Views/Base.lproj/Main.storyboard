@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--To Do List-->
+        <!--Tasks-->
         <scene sceneID="iMl-9s-iMd">
             <objects>
                 <tableViewController id="b4x-YL-k6h" customClass="CategoryViewController" customModule="Todoey" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                             <outlet property="delegate" destination="b4x-YL-k6h" id="9VA-vb-vw4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="To Do List" id="scM-MX-dp7">
+                    <navigationItem key="navigationItem" title="Tasks" id="scM-MX-dp7">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="s5M-aa-B2U">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -55,9 +55,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="Ivr-wV-wGe">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="search" id="Ivr-wV-wGe">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" systemColor="systemBackgroundColor"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="jzJ-TT-Sqt" id="thX-7g-5Ao"/>
@@ -81,12 +82,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="To Do List" id="G2a-hN-Kk2">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="RSq-Gl-FnE">
-                            <color key="tintColor" systemColor="systemBackgroundColor"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="jzJ-TT-Sqt" id="Ras-CP-hoG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="Ivr-wV-wGe" id="LOv-mP-FoG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Bk-rs-bOH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,12 +100,17 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2oJ-PD-kk5" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RZZ-z8-4Bz">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="RZZ-z8-4Bz">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
-                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" systemColor="systemMintColor"/>
                         <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
